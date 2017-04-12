@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Fun With Flags</string>
+    <string name="q1">What is the country of this flag?</string>
+    <string name="r11">Belgium</string>
+    <string name="r12">France</string>
+    <string name="r13">Italy</string>
+    <string name="r14">Spain</string>
+    <string name="i1">belgiumflag</string>
+
+    <string name="q2">Which countries have a dominant red color flag?</string>
+    <string name="r21">Spain</string>
+    <string name="r22">China</string>
+    <string name="r23">England</string>
+    <string name="r24">Switzerland</string>
+    <string name="i2">redflag</string>
+
+    <string name="q3">To which country does this flag belong?</string>
+    <string name="r3">Deutschland</string>
+    <string name="i3">deut</string>
+
+    <string name="q4">How much stars has the USA Flag?</string>
+    <string name="r41">40</string>
+    <string name="r42">50</string>
+    <string name="r43">60</string>
+    <string name="r44">70</string>
+    <string name="i4">usa</string>
+
+    <string name="BlueSum"> : You answered to the question</string>
+    <string name="RedSum"> : You didn\'t answered to the question</string>
+    <string name="Only"> : Question with one answer</string>
+    <string name="More"> : Question with two or more answers</string>
+    <string name="Write"> : Question with one word to answer</string>
+    <string name="ClickSum"> : Click on the top right to access</string>
+
+</resources>

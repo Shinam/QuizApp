@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.quizapp.MainActivity"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fun"
+        android:layout_centerHorizontal="true"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:layout_marginTop="48dp"/>
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/sheldon"
+            android:scaleY="2"
+            android:scaleX="2"
+            android:layout_marginTop="13dp"/>
+
+        <ImageView
+            android:id="@+id/circle_crop"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/circle_crop" />
+
+
+    </FrameLayout>
+    <Button
+        android:id="@+id/Start"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        android:text="start"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/frame"
+        android:layout_marginTop="16dp"
+        android:onClick="Start"/>
+
+    <Button
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Help"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:onClick="Helped"/>
+
+</RelativeLayout>
