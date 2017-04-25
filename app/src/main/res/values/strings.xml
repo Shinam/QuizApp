@@ -32,4 +32,8 @@
     <string name="Write"> : Question with one word to answer</string>
     <string name="ClickSum"> : Click on the top right to access</string>
 
+    <string name="Sentence0">I\'m exceedingly smart. I graduated college at fourteen.</string>
+    <string name="Sentence1">There\'s no denying that I have feelings for you that can\'t be explained in any other way.</string>
+    <string name="Sentence2">Don\'t be silly, I\'m a fan of anything that tries to replace actual human contact.</string>
+    <string name="Sentence3">A neutron walks into a bar and asks how much for a drink. The bartender replies "for you, no charge".</string>
 </resources>
