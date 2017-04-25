@@ -19,7 +19,7 @@ public class QuestionType2 extends Question {
     private boolean mAns4;
 
 
-    public QuestionType2(String Img, String Quest, String R1, String R2, String R3, String R4, boolean Correct1, boolean Correct2, boolean Correct3, boolean Correct4){
+    public QuestionType2(String Img, String Quest, String R1, String R2, String R3, String R4, boolean Correct1, boolean Correct2, boolean Correct3, boolean Correct4) {
         this.mImg = Img;
         this.mQuestion = Quest;
         mR1 = R1;
@@ -37,22 +37,75 @@ public class QuestionType2 extends Question {
 
     }
 
-    public String getImg() { return mImg; }
-    public String getQuestion() { return mQuestion; }
-    public String getR1() { return mR1; }
-    public String getR2() { return mR2; }
-    public String getR3() { return mR3; }
-    public String getR4() { return mR4; }
-    public void setAns1(boolean ans) { mAns1 = ans; }
-    public void setAns2(boolean ans) { mAns2 = ans; }
-    public void setAns3(boolean ans) { mAns3 = ans; }
-    public void setAns4(boolean ans) { mAns4 = ans; }
-    public boolean getAns1() { return mAns1; }
-    public boolean getAns2() { return mAns2; }
-    public boolean getAns3() { return mAns3; }
-    public boolean getAns4() { return mAns4; }
-    public boolean getCorrect1() { return mCorrect1; }
-    public boolean getCorrect2() { return mCorrect2; }
-    public boolean getCorrect3() { return mCorrect3; }
-    public boolean getCorrect4() { return mCorrect4; }
+    public String getImg() {
+        return mImg;
+    }
+
+    public String getQuestion() {
+        return mQuestion;
+    }
+
+    public String getR1() {
+        return mR1;
+    }
+
+    public String getR2() {
+        return mR2;
+    }
+
+    public String getR3() {
+        return mR3;
+    }
+
+    public String getR4() {
+        return mR4;
+    }
+
+    public void setAns1(boolean ans) {
+        mAns1 = ans;
+    }
+
+    public void setAns2(boolean ans) {
+        mAns2 = ans;
+    }
+
+    public void setAns3(boolean ans) {
+        mAns3 = ans;
+    }
+
+    public void setAns4(boolean ans) {
+        mAns4 = ans;
+    }
+
+    public boolean getAns1() {
+        return mAns1;
+    }
+
+    public boolean getAns2() {
+        return mAns2;
+    }
+
+    public boolean getAns3() {
+        return mAns3;
+    }
+
+    public boolean getAns4() {
+        return mAns4;
+    }
+
+    public boolean getCorrect1() {
+        return mCorrect1;
+    }
+
+    public boolean getCorrect2() {
+        return mCorrect2;
+    }
+
+    public boolean getCorrect3() {
+        return mCorrect3;
+    }
+
+    public boolean getCorrect4() {
+        return mCorrect4;
+    }
 }

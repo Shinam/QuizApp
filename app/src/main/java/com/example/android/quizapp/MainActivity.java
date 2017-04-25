@@ -14,12 +14,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void Start(View view){
+    public void Start(View view) {
         Intent intent = new Intent(MainActivity.this, Quiz.class);
         startActivity(intent);
     }
 
-    public void Helped(View view){
+    public void Helped(View view) {
         Intent intent = new Intent(this, Help.class);
         startActivity(intent);
     }

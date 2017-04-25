@@ -12,7 +12,7 @@ public class Help extends AppCompatActivity {
         setContentView(R.layout.activity_help);
     }
 
-    public void Close(View view){
+    public void Close(View view) {
         finish();
     }
 }

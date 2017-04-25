@@ -102,12 +102,12 @@ public class Quiz extends AppCompatActivity {
     }
 
     // Show the next question
-    public void ShowQuestion(){
+    public void ShowQuestion() {
         TextView questNmb = (TextView) findViewById(R.id.questionCnt);
-        questNmb.setText("Question "+(cpt+1)+"/4");
+        questNmb.setText("Question " + (cpt + 1) + "/4");
         currentQuestion = questions.get(cpt);
         String tmp;
-        if(currentQuestion instanceof QuestionType1){
+        if (currentQuestion instanceof QuestionType1) {
             Title = (RelativeLayout) findViewById(R.id.appBar);
             Title.setBackgroundResource(R.color.Top);
             Lay = (LinearLayout) findViewById(R.id.actionLayout);
@@ -139,11 +139,10 @@ public class Quiz extends AppCompatActivity {
             Imag = (ImageView) findViewById(flag);
             Resources res = getResources();
             String mDrawableName = Q1.getImg();
-            int resID = res.getIdentifier(mDrawableName , "drawable", getPackageName());
-            Drawable drawable = res.getDrawable(resID );
-            Imag.setImageDrawable(drawable );
-        }
-        else if(currentQuestion instanceof QuestionType2){
+            int resID = res.getIdentifier(mDrawableName, "drawable", getPackageName());
+            Drawable drawable = res.getDrawable(resID);
+            Imag.setImageDrawable(drawable);
+        } else if (currentQuestion instanceof QuestionType2) {
             Title = (RelativeLayout) findViewById(R.id.appBar);
             Title.setBackgroundResource(R.color.Multi);
             Lay = (LinearLayout) findViewById(R.id.actionLayout);
@@ -175,11 +174,10 @@ public class Quiz extends AppCompatActivity {
             Imag = (ImageView) findViewById(flag);
             Resources res = getResources();
             String mDrawableName = Q2.getImg();
-            int resID = res.getIdentifier(mDrawableName , "drawable", getPackageName());
-            Drawable drawable = res.getDrawable(resID );
-            Imag.setImageDrawable(drawable );
-        }
-        else if(currentQuestion instanceof QuestionType3){
+            int resID = res.getIdentifier(mDrawableName, "drawable", getPackageName());
+            Drawable drawable = res.getDrawable(resID);
+            Imag.setImageDrawable(drawable);
+        } else if (currentQuestion instanceof QuestionType3) {
             Title = (RelativeLayout) findViewById(R.id.appBar);
             Title.setBackgroundResource(R.color.Open);
             Lay = (LinearLayout) findViewById(R.id.actionLayout);
@@ -199,37 +197,34 @@ public class Quiz extends AppCompatActivity {
             Imag = (ImageView) findViewById(flag);
             Resources res = getResources();
             String mDrawableName = Q3.getImg();
-            int resID = res.getIdentifier(mDrawableName , "drawable", getPackageName());
-            Drawable drawable = res.getDrawable(resID );
-            Imag.setImageDrawable(drawable );
+            int resID = res.getIdentifier(mDrawableName, "drawable", getPackageName());
+            Drawable drawable = res.getDrawable(resID);
+            Imag.setImageDrawable(drawable);
+        } else {
+            Toast.makeText(Quiz.this, "Error", Toast.LENGTH_SHORT).show();
         }
-        else{
-            Toast.makeText(Quiz.this ,"Error", Toast.LENGTH_SHORT).show();
-        }
-        if(cpt >= 0 && cpt <= 3){
+        if (cpt >= 0 && cpt <= 3) {
             TextView But = (TextView) findViewById(R.id.nextBut);
             But.setVisibility(View.VISIBLE);
         }
-        if(cpt > 0 && cpt <= 3){
+        if (cpt > 0 && cpt <= 3) {
             View Sep = findViewById(R.id.sep);
             Sep.setVisibility(View.VISIBLE);
         }
-        if(cpt == 3){
+        if (cpt == 3) {
             myQuest = (TextView) findViewById(R.id.nextBut);
             myQuest.setText("Finish");
-        }
-        else{
+        } else {
             myQuest = (TextView) findViewById(R.id.nextBut);
             myQuest.setText("Next");
         }
     }
 
     // Next Question and take the answer to the Array
-    public void next(View view){
-        if(cpt == 4){
+    public void next(View view) {
+        if (cpt == 4) {
             Result();
-        }
-        else {
+        } else {
             if (currentQuestion instanceof QuestionType1) {
                 if (getInt() != -1)
                     ((QuestionType1) currentQuestion).setAns(getInt());
@@ -237,26 +232,22 @@ public class Quiz extends AppCompatActivity {
                 CheckBox chck = (CheckBox) findViewById(R.id.checkbox1);
                 if (chck.isChecked()) {
                     ((QuestionType2) currentQuestion).setAns1(true);
-                }
-                else
+                } else
                     ((QuestionType2) currentQuestion).setAns1(false);
                 chck = (CheckBox) findViewById(R.id.checkbox2);
                 if (chck.isChecked()) {
                     ((QuestionType2) currentQuestion).setAns2(true);
-                }
-                else
+                } else
                     ((QuestionType2) currentQuestion).setAns2(false);
                 chck = (CheckBox) findViewById(R.id.checkbox3);
                 if (chck.isChecked()) {
                     ((QuestionType2) currentQuestion).setAns3(true);
-                }
-                else
+                } else
                     ((QuestionType2) currentQuestion).setAns3(false);
                 chck = (CheckBox) findViewById(R.id.checkbox4);
                 if (chck.isChecked()) {
                     ((QuestionType2) currentQuestion).setAns4(true);
-                }
-                else
+                } else
                     ((QuestionType2) currentQuestion).setAns4(false);
             } else if (currentQuestion instanceof QuestionType3) {
                 TextView EditAns = (TextView) findViewById(R.id.EditAnswer);
@@ -272,18 +263,17 @@ public class Quiz extends AppCompatActivity {
                 View Sep = findViewById(R.id.sep);
                 Sep.setVisibility(View.VISIBLE);
             }
-            if(cpt == 3){
+            if (cpt == 3) {
                 cpt++;
                 Summary();
-            }
-            else {
+            } else {
                 cpt++;
                 progBar.setProgress(cpt + 1);
                 rg1.clearCheck();
                 rg2.clearCheck();
                 ShowQuestion();
             }
-            if(cpt == 0){
+            if (cpt == 0) {
                 TextView previousButton = (TextView) findViewById(R.id.prevBut);
                 previousButton.setVisibility(View.GONE);
                 View Sep = findViewById(R.id.sep);
@@ -293,21 +283,21 @@ public class Quiz extends AppCompatActivity {
     }
 
     // Previous Question
-    public void previous(View view){
-        if(cpt == 1){
+    public void previous(View view) {
+        if (cpt == 1) {
             TextView previousButton = (TextView) findViewById(R.id.prevBut);
             previousButton.setVisibility(View.GONE);
             View Sep = findViewById(R.id.sep);
             Sep.setVisibility(View.GONE);
         }
-        if(cpt == 4){
+        if (cpt == 4) {
             myList = (ListView) findViewById(R.id.question_list);
             myList.setVisibility(View.GONE);
             Lay = (LinearLayout) findViewById(R.id.activity_question1);
             Lay.setVisibility(View.VISIBLE);
         }
         cpt--;
-        progBar.setProgress(cpt+1);
+        progBar.setProgress(cpt + 1);
         rg1.clearCheck();
         rg2.clearCheck();
         ShowQuestion();
@@ -337,7 +327,7 @@ public class Quiz extends AppCompatActivity {
     }
 
     // Show All questions, can click on it
-    public void Summary(){
+    public void Summary() {
         myQuest = (TextView) findViewById(R.id.nextBut);
         myQuest.setText("Result");
         Title = (RelativeLayout) findViewById(R.id.appBar);
@@ -345,13 +335,13 @@ public class Quiz extends AppCompatActivity {
         Lay = (LinearLayout) findViewById(R.id.actionLayout);
         Lay.setBackgroundResource(R.color.summ);
         ArrayList<String> questionName = new ArrayList<>();
-        for(int i = 0; i < 4; i++){
+        for (int i = 0; i < 4; i++) {
             currentQuestion = questions.get(i);
-            if(currentQuestion instanceof QuestionType1)
+            if (currentQuestion instanceof QuestionType1)
                 questionName.add(((QuestionType1) currentQuestion).getQuestion());
-            else if(currentQuestion instanceof  QuestionType2)
+            else if (currentQuestion instanceof QuestionType2)
                 questionName.add(((QuestionType2) currentQuestion).getQuestion());
-            else if(currentQuestion instanceof  QuestionType3)
+            else if (currentQuestion instanceof QuestionType3)
                 questionName.add(((QuestionType3) currentQuestion).getQuestion());
             else
                 Toast.makeText(Quiz.this, "Error Summary", Toast.LENGTH_SHORT).show();
@@ -365,34 +355,31 @@ public class Quiz extends AppCompatActivity {
             public View getView(int position, View convertView, ViewGroup parent) {
                 View row = super.getView(position, convertView, parent);
                 currentQuestion = questions.get(position);
-                if(currentQuestion instanceof QuestionType1)
-                    if(((QuestionType1) currentQuestion).getAns() == 0)
-                        row.setBackgroundColor (Color.RED);
+                if (currentQuestion instanceof QuestionType1)
+                    if (((QuestionType1) currentQuestion).getAns() == 0)
+                        row.setBackgroundColor(Color.RED);
                     else
                         row.setBackgroundResource(R.color.Top);
-                else if(currentQuestion instanceof QuestionType2) {
-                        if (((QuestionType2) currentQuestion).getAns1() == false
-                                && ((QuestionType2) currentQuestion).getAns2() == false
-                                && ((QuestionType2) currentQuestion).getAns3() == false
-                                && ((QuestionType2) currentQuestion).getAns4() == false) {
-                            row.setBackgroundColor(Color.RED);
-                        }
-                        else {
-                            row.setBackgroundResource(R.color.Top);
-                        }
+                else if (currentQuestion instanceof QuestionType2) {
+                    if (((QuestionType2) currentQuestion).getAns1() == false
+                            && ((QuestionType2) currentQuestion).getAns2() == false
+                            && ((QuestionType2) currentQuestion).getAns3() == false
+                            && ((QuestionType2) currentQuestion).getAns4() == false) {
+                        row.setBackgroundColor(Color.RED);
+                    } else {
+                        row.setBackgroundResource(R.color.Top);
                     }
-                else if(currentQuestion instanceof QuestionType3) {
+                } else if (currentQuestion instanceof QuestionType3) {
                     String test = ((QuestionType3) currentQuestion).getAns();
                     int size = 0;
-                    if(test != null)
+                    if (test != null)
                         size = test.length();
                     if (size == 0)
                         row.setBackgroundColor(Color.RED);
                     else
                         row.setBackgroundResource(R.color.Top);
-                }
-                else
-                    row.setBackgroundColor (Color.WHITE);
+                } else
+                    row.setBackgroundColor(Color.WHITE);
                 return row;
             }
         });
@@ -403,13 +390,13 @@ public class Quiz extends AppCompatActivity {
                 Summary();
             }
         });
-        if(cpt < 4){
+        if (cpt < 4) {
             cpt--;
             SelectQuest();
         }
     }
 
-    public void SelectQuest(){
+    public void SelectQuest() {
         myList = (ListView) findViewById(R.id.question_list);
         myList.setVisibility(View.GONE);
         Lay = (LinearLayout) findViewById(R.id.activity_question1);
@@ -418,41 +405,39 @@ public class Quiz extends AppCompatActivity {
     }
 
     //Calculate the result and show it
-    public void Result(){
+    public void Result() {
         int result = 0;
-        for(int i = 0; i < 4; i++){
+        for (int i = 0; i < 4; i++) {
             currentQuestion = questions.get(i);
-            if(currentQuestion instanceof QuestionType1){
+            if (currentQuestion instanceof QuestionType1) {
                 int a = ((QuestionType1) currentQuestion).getAns();
-                if(a == ((QuestionType1) currentQuestion).getCorrect()){
+                if (a == ((QuestionType1) currentQuestion).getCorrect()) {
                     result++;
                 }
-            }
-            else if(currentQuestion instanceof  QuestionType2){
+            } else if (currentQuestion instanceof QuestionType2) {
                 boolean b = ((QuestionType2) currentQuestion).getAns1();
                 boolean c = ((QuestionType2) currentQuestion).getAns2();
                 boolean d = ((QuestionType2) currentQuestion).getAns3();
                 boolean e = ((QuestionType2) currentQuestion).getAns4();
-                if(b == ((QuestionType2) currentQuestion).getCorrect1()
+                if (b == ((QuestionType2) currentQuestion).getCorrect1()
                         && c == ((QuestionType2) currentQuestion).getCorrect2()
                         && d == ((QuestionType2) currentQuestion).getCorrect3()
-                        && e == ((QuestionType2) currentQuestion).getCorrect4()){
+                        && e == ((QuestionType2) currentQuestion).getCorrect4()) {
                     result++;
                 }
-            }
-            else if(currentQuestion instanceof  QuestionType3){
-                String anss = ((QuestionType3)currentQuestion).getAns();
-                if(anss.equalsIgnoreCase(((QuestionType3) currentQuestion).getCorrect())){
+            } else if (currentQuestion instanceof QuestionType3) {
+                String anss = ((QuestionType3) currentQuestion).getAns();
+                if (anss.equalsIgnoreCase(((QuestionType3) currentQuestion).getCorrect())) {
                     result++;
                 }
             }
         }
-        result = result*5;
+        result = result * 5;
         Intent intent = new Intent(this, Results.class).putExtra("res", result);
         startActivity(intent);
     }
 
-    public void Sum(View view){
+    public void Sum(View view) {
         cpt = 3;
         TextView But = (TextView) findViewById(R.id.nextBut);
         But.setVisibility(View.GONE);
@@ -476,9 +461,9 @@ public class Quiz extends AppCompatActivity {
                     ActionBar.LayoutParams.MATCH_PARENT,
                     true);
             popupWindow.showAtLocation(this.findViewById(R.id.activity_question), Gravity.CENTER, 0, 0);
-        }
-        else{
-            popupWindow.dismiss();;
+        } else {
+            popupWindow.dismiss();
+            ;
         }
     }
 }

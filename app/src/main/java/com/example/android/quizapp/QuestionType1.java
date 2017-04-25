@@ -12,7 +12,7 @@ public class QuestionType1 extends Question {
     private int mCorrect;
     private int mAns;
 
-    public QuestionType1(String Img, String Quest, String R1, String R2, String R3, String R4, int Correct){
+    public QuestionType1(String Img, String Quest, String R1, String R2, String R3, String R4, int Correct) {
         this.mImg = Img;
         this.mQuestion = Quest;
         mR1 = R1;
@@ -23,14 +23,40 @@ public class QuestionType1 extends Question {
         mAns = 0;
     }
 
-    public String getImg() { return mImg; }
-    public String getQuestion() { return mQuestion; }
-    public String getR1() { return mR1; }
-    public String getR2() { return mR2; }
-    public String getR3() { return mR3; }
-    public String getR4() { return mR4; }
-    public void setAns(int ans){ mAns = ans; }
-    public int getAns() {return mAns; }
-    public int getCorrect() { return mCorrect; }
+    public String getImg() {
+        return mImg;
+    }
+
+    public String getQuestion() {
+        return mQuestion;
+    }
+
+    public String getR1() {
+        return mR1;
+    }
+
+    public String getR2() {
+        return mR2;
+    }
+
+    public String getR3() {
+        return mR3;
+    }
+
+    public String getR4() {
+        return mR4;
+    }
+
+    public void setAns(int ans) {
+        mAns = ans;
+    }
+
+    public int getAns() {
+        return mAns;
+    }
+
+    public int getCorrect() {
+        return mCorrect;
+    }
 
 }
