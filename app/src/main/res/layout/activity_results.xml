@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -8,68 +7,70 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/four"
+        android:paddingRight="20dp"
         android:scaleX="2.5"
         android:scaleY="2.5"
-        android:paddingRight="20dp"/>
-<LinearLayout
-    android:id="@+id/activity_question"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.android.quizapp.Help">
-    <RelativeLayout
-        android:id="@+id/appBar"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@color/summ"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/catName"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:textColor="@android:color/white"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            android:text="@string/app_name" />
-
-    </RelativeLayout>
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="7"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="20/20"
-            android:textSize="80dp"
-            android:textColor="@android:color/white"
-            android:layout_centerInParent="true"/>
-    </RelativeLayout>
+        android:src="@drawable/four" />
 
     <LinearLayout
-        android:id="@+id/actionLayout"
+        android:id="@+id/activity_question"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/summ"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.android.quizapp.Help">
 
-        <TextView
-            android:id="@+id/nextBut"
-            style="@style/actionButtons"
-            android:onClick="Close"
-            android:text="Restart" />
+        <RelativeLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/summ"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/catName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@android:color/white"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="20/20"
+                android:textColor="@android:color/white"
+                android:textSize="80dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/actionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/summ"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nextBut"
+                style="@style/actionButtons"
+                android:onClick="Close"
+                android:text="Restart" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
 </RelativeLayout>
 
 

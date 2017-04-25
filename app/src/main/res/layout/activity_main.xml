@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical"
-    tools:context="com.example.android.quizapp.MainActivity"
-    android:background="@android:color/white">
+    tools:context="com.example.android.quizapp.MainActivity">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/fun"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
         android:scaleX="1.5"
         android:scaleY="1.5"
-        android:layout_marginTop="48dp"/>
+        android:src="@drawable/fun" />
+
     <FrameLayout
         android:id="@+id/frame"
         android:layout_width="180dp"
@@ -26,10 +27,10 @@
             android:id="@+id/pic"
             android:layout_width="180dp"
             android:layout_height="180dp"
-            android:src="@drawable/sheldon"
-            android:scaleY="2"
+            android:layout_marginTop="13dp"
             android:scaleX="2"
-            android:layout_marginTop="13dp"/>
+            android:scaleY="2"
+            android:src="@drawable/sheldon" />
 
         <ImageView
             android:id="@+id/circle_crop"
@@ -39,25 +40,26 @@
 
 
     </FrameLayout>
+
     <Button
         android:id="@+id/Start"
         android:layout_width="180dp"
         android:layout_height="80dp"
-        android:text="start"
-        android:gravity="center"
-        android:layout_centerInParent="true"
         android:layout_below="@id/frame"
+        android:layout_centerInParent="true"
         android:layout_marginTop="16dp"
-        android:onClick="Start"/>
+        android:gravity="center"
+        android:onClick="Start"
+        android:text="start" />
 
     <Button
-        android:layout_marginBottom="16dp"
-        android:layout_alignParentBottom="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Help"
-        android:gravity="center"
+        android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:onClick="Helped"/>
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:onClick="Helped"
+        android:text="Help" />
 
 </RelativeLayout>
